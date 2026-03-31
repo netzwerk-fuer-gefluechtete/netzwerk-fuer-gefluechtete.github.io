@@ -1,0 +1,169 @@
+:root {
+    --pico-font-family-sans-serif: Fira Sans, Inter, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Helvetica, Arial, "Helvetica Neue", sans-serif, var(--pico-font-family-emoji);
+    --pico-font-size: 92.5%;
+    /* Original: 100% */
+    --pico-line-height: 1.25;
+    /* Original: 1.5 */
+    --pico-form-element-spacing-vertical: 0.5rem;
+    /* Original: 1rem */
+    --pico-form-element-spacing-horizontal: 1.0rem;
+    /* Original: 1.25rem */
+    --pico-border-radius: 0.375rem;
+    /* Original: 0.25rem */
+}
+html {
+  /* Set this to the height of your header (e.g., 4rem or 80px) */
+  scroll-padding-top: 3.5rem; 
+  scroll-behavior: smooth; /* Makes the jump look nice */
+}
+.narrow-container {
+  max-width: 700px; /* 60% of a standard screen is roughly 700-800px */
+  margin-inline: auto;
+}
+.centered-map {
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px; /* Optional: matches Pico's rounded style */
+  max-width: 100%;    /* Ensures it doesn't break on small screens */
+}
+.centered-heading {
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+header.container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--pico-background-color); /* Matches your theme */
+  /*border-bottom: 1px solid var(--pico-muted-border-color); /* Optional: adds a separation line */
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  margin-bottom: 0;
+
+}
+@media (min-width: 576px) {
+    :root {
+        --pico-font-size: 87.5%;
+        /* Original: 106.25% */
+    }
+}
+
+@media (min-width: 768px) {
+    :root {
+        --pico-font-size: 87.5%;
+        /* Original: 112.5% */
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --pico-font-size: 87.5%;
+        /* Original: 118.75% */
+    }
+}
+
+@media (min-width: 1280px) {
+    :root {
+        --pico-font-size: 87.5%;
+        /* Original: 125% */
+    }
+}
+
+@media (min-width: 1536px) {
+    :root {
+        --pico-font-size: 87.5%;
+        /* Original: 131.25% */
+    }
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    --pico-font-family: Lato;
+    /* Original: 700 */
+}
+
+.half-width-center {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Page layout tweaks */
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding-bottom: 6rem; /* space so content not hidden behind info box */
+    }
+
+    /* Fixed info window (bottom-right) */
+    .info-window {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      max-width: 320px;
+      z-index: 999;
+    }
+
+    /* Make info window a bit smaller on mobile */
+    @media (max-width: 768px) {
+      .info-window {
+        left: 1rem;
+        right: 1rem;
+        max-width: none;
+      }
+    }
+
+header nav ul li {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+header nav a, 
+header nav strong {
+  line-height: 1; /* Tightens the text vertical space */
+}
+
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.fira-sans-regular {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.londrina-shadow-regular {
+  font-family: "Londrina Shadow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@media (max-width: 768px) {
+  /* Allow the main nav container to wrap */
+  nav {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  /* Allow the lists inside the nav to wrap and center them */
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: var(--pico-spacing);
+  }
+
+  /* Give the list items some breathing room when they wrap */
+  nav ul li {
+    padding: 0.25rem 0.5rem;
+  }
+}
