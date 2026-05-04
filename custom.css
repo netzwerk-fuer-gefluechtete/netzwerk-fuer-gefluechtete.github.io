@@ -94,7 +94,11 @@ h6 {
     margin-left: auto;
     margin-right: auto;
   }
-
+.full-width-center {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   /* Page layout tweaks */
     main {
       max-width: 960px;
